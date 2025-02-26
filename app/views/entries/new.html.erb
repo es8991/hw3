@@ -1,20 +1,20 @@
 <h1>New Entry</h1>
 
-<form action="/places" method="post">
-
+<form action="/places/<%= @place["id"] %>/entries" method="post">
+  
   <p>
     <label for="name">Name</label>
-    <input type="text" name="name" id="name">
+    <input type="text" name="entry[name]" id="name">
   </p>
 
-  </p>   
-    <label for="when">Date</label>
-    <input type="date" name="when" id="when">
+  <p>
+    <label for="date">Date</label>
+    <input type="date" name="entry[date]" id="date">
   </p>
 
   <p>
     <label for="detail">Detail</label>
-    <textarea name="detail" id="detail"></textarea>
+    <textarea name="entry[detail]" id="detail"></textarea>
   </p>
 
   <button>Submit</button>
